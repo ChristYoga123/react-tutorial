@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI With JS</title>
+</head>
+<body>
+    <!-- Elemen dengan HTML -->
+    <h1>Hello from HTML</h1>
+
+    <!-- Elemen dengan Javascript : perlu menggunakan div sebagai tempat output hasil DOM JS -->
+    <div id="root"></div>
+
+
+    <script>
+        // Select elemen root dengan DOM
+        const root = document.querySelector("#root");
+
+        // Membuat elemen yang akan dimasukkan ke root menggunakan appendChild()
+        // Membuat elemen seperti div/span/h1/...
+        const element = document.createElement('h1');
+        
+        
+        // Membuat isi dan class untuk element h1 menggunakan property yang dimiliki
+        element.textContent = "Hello from DOM Javascript";
+        element.className = "heading-1";
+        // Render element yang dibuat ke div root
+        root.appendChild(element);
+        
+        // Disclaimer: seluruh properti seperti textContext, className, dan semua objek yang dimiliki oleh element dapat diconsole.log
+        console.log(element);
+    </script>
+</body>
+</html>
